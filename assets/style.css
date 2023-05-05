@@ -1,0 +1,818 @@
+/* リセット -----------------------------------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+a {
+  color: black;
+}
+
+/* ヘッダー全体 -----------------------------------------------------*/
+header {
+  background-color: white;
+  height: 50px;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+
+/* ハンバーガー -----------------------------------------------------*/
+.hamburger {
+  margin: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  float: right;
+}
+
+.line {
+  width: 100%;
+  height: 3px;
+  background-color: #333;
+}
+
+.menu {
+  background-color: white;
+  height: 210px;
+  width: 150px;
+  position: absolute;
+  top: 50px;
+  right: 0;
+  font-family: fantasy;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.menu li {
+  width: 100%;
+  text-align: center;
+}
+
+a {
+  display: block;
+}
+
+.menu li:hover {
+  cursor: pointer;
+  background-color: whitesmoke;
+}
+
+@media screen and (max-width:520px) {
+  .menu {
+    width: 100%;
+    opacity: 0.7;
+  }
+}
+
+/* Languageハンバーガー -------------------------------------------*/
+#language-menu {
+  background-color: white;
+  height: 105px;
+  width: 150px;
+  position: absolute;
+  top: 260px;
+  right: 0;
+  font-family: fantasy;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#language-menu li {
+  width: 100%;
+  text-align: center;
+}
+
+#language-menu li:hover {
+  cursor: pointer;
+  background-color: whitesmoke;
+}
+
+@media screen and (max-width:520px) {
+  #language-menu {
+    width: 100%;
+    opacity: 0.7;
+  }
+}
+
+
+/* メイン全体 -----------------------------------------------------*/
+main {
+  background-image: url(./img/background-wedding.png);
+  background-size: contain;
+  height: 5540px;
+  padding-bottom: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media screen and (max-width:520px) {
+  main {
+    height: 4500px;
+    padding-bottom: 300px;
+  }
+}
+
+/* トップ画 -----------------------------------------------------*/
+#top {
+  height: 70vh;
+  width: 100vw;
+  background-color: rgb(212, 246, 251);
+  /* background-image: url(./img/pexels-doğukan-benli-3094345.jpg); */
+  /* background-position: center; */
+  /* background-size: cover; */
+  /* background-repeat: no-repeat; */
+  position: relative;
+  overflow: hidden;
+}
+
+@keyframes smallerJapan {
+  0% {
+    height: 250px;
+  }
+
+  100% {
+    height: 100px;
+    opacity: 0;
+  }
+}
+
+.moveJ {
+  animation-name: smallerJapan;
+  animation-duration: 7s;
+}
+
+.japan {
+  height: 250px;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+.japan img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+@keyframes smallerSweden {
+  0% {
+    height: 250px;
+  }
+
+  100% {
+    height: 100px;
+    opacity: 0;
+  }
+}
+
+.moveS {
+  animation-name: smallerSweden;
+  animation-duration: 7s;
+}
+
+.sweden {
+  height: 250px;
+  position: absolute;
+  top: 70px;
+  left: 20px;
+}
+
+.sweden img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+@keyframes moving-airplane {
+  0% {
+    top: 290px;
+    left: 130px;
+    height: 60px;
+  }
+
+  100% {
+    top: 220px;
+    left: 40%;
+    height: 180px;
+    opacity: 0;
+  }
+}
+
+.airplane {
+  height: 60px;
+  position: absolute;
+  top: 290px;
+  left: 130px;
+}
+
+.moveA {
+  animation-name: moving-airplane;
+  animation-duration: 7s;
+}
+
+.airplane img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+@keyframes moving-airplane2 {
+  0% {
+    bottom: 110px;
+    right: 180px;
+    height: 60px;
+  }
+
+  100% {
+    bottom: 190px;
+    right: 40%;
+    height: 180px;
+    opacity: 0;
+  }
+}
+
+.airplane2 {
+  background-color: aliceblue;
+  height: 60px;
+  position: absolute;
+  bottom: 110px;
+  right: 180px;
+}
+
+.moveA2 {
+  animation-name: moving-airplane2;
+  animation-duration: 7s;
+}
+
+.airplane2 img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  transform: scaleX(-1);
+}
+
+@keyframes biggerL {
+  0% {
+    width: 0%;
+    opacity: 0.1;
+  }
+
+  50% {
+    width: 120vw;
+    opacity: 0.7;
+  }
+
+  100% {
+    width: 120vw;
+    opacity: 0;
+  }
+}
+
+.moveL {
+  animation-name: biggerL;
+  animation-duration: 6s;
+  animation-delay: 3.7s;
+}
+
+.love {
+  width: 0%;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
+}
+
+.love img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+#wedding {
+  padding: 110px 0 70px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  font-family: cursive;
+}
+
+@keyframes bigger-font {
+  from {
+    font-size: 0px;
+  }
+
+  to {
+    font-size: 48px;
+    color: black;
+  }
+}
+
+#wedding h1 {
+  font-size: 0px;
+  color: rgb(212, 246, 251);
+}
+
+.move {
+  animation-name: bigger-font;
+  animation-duration: 2s;
+  animation-delay: 4.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes bigger-font2 {
+  from {
+    font-size: 0px;
+  }
+
+  to {
+    font-size: 56px;
+    color: black;
+  }
+}
+
+#wedding h2 {
+  font-size: 0px;
+  color: rgb(212, 246, 251);
+  margin-top: 20px;
+}
+
+.move2 {
+  animation-name: bigger-font2;
+  animation-duration: 2s;
+  animation-delay: 4.5s;
+  animation-fill-mode: forwards;
+}
+
+/* レスポンシブアニメーション-------------------------------------- */
+@media screen and (max-width:520px) {
+  #wedding {
+    padding: 200px 0 180px;
+  }
+  @keyframes bigger-font {
+    from {
+      font-size: 0px;
+    }
+    to {
+      font-size: 34px;
+      color: black;
+    }
+  }
+  #wedding h1 {
+    font-size: 34px;
+  }
+  @keyframes bigger-font2 {
+    from {
+      font-size: 0px;
+    }
+  
+    to {
+      font-size: 38px;
+      color: black;
+    }
+  }
+  #wedding h2 {
+    font-size: 38px;
+  }
+  @keyframes smallerJapan {
+    0% {
+      height: 100px;
+    }
+    100% {
+      height: 70px;
+      opacity: 0;
+    }
+  }
+  .japan {
+    height: 100px;
+  }
+  @keyframes smallerSweden {
+    0% {
+      height: 100px;
+    }
+    100% {
+      height: 70px;
+      opacity: 0;
+    }
+  }
+  .sweden {
+    height: 100px;
+  }
+  @keyframes moving-airplane {
+    0% {
+      top: 162px;
+      left: 50px;
+      height: 60px;
+    }
+    100% {
+      top: 220px;
+      left: 40%;
+      height: 120px;
+      opacity: 0;
+    }
+  }
+  .airplane {
+    top: 162px;
+    left: 50px;
+  }
+  @keyframes moving-airplane2 {
+    0% {
+      bottom: 110px;
+      right: 50px;
+      height: 60px;
+    }
+    100% {
+      bottom: 190px;
+      right: 40%;
+      height: 120px;
+      opacity: 0;
+    }
+  }
+  .airplane2 {
+    bottom: 110px;
+    right: 50px;
+  }
+  @keyframes biggerL {
+    0% {
+      width: 0%;
+      opacity: 0.1;
+    }
+  
+    50% {
+      width: 200vw;
+      opacity: 0.7;
+    }
+  
+    100% {
+      width: 200vw;
+      opacity: 0;
+    }
+  }
+}
+
+/* メイン２ -----------------------------------------------------*/
+#message {
+  height: 910px;
+  padding-top: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width:520px) {
+  #message {
+    height: 490px;
+  }
+}
+
+#message p {
+  height: 850px;
+  text-align: center;
+  font-size: 32px;
+  font-family: HiraMinProN-W3;
+}
+
+@media screen and (max-width:520px) {
+  #message p {
+    height: 430px;
+    font-size: 16px;
+  }
+}
+
+/* メイン３ -----------------------------------------------------*/
+#introduction {
+  height: 800px;
+  width: 80vw;
+  padding-top: 60px;
+}
+
+@media screen and (max-width:520px) {
+  #introduction {
+    height: 1100px;
+  }
+}
+
+#introduction h2 {
+  font-size: 40px;
+  font-family: cursive;
+  height: 60px;
+  line-height: 60px;
+  line-height: 60px;
+  text-align: center;
+}
+
+@media screen and (max-width:520px) {
+  #introduction h2 {
+    font-size: 28px;
+    height: 60px;
+  }
+}
+
+#each-introduction {
+  height: 680px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+@media screen and (max-width:520px) {
+  #each-introduction {
+    flex-direction: column;
+    height: 980px;
+  }
+}
+
+.each-infomation {
+  height: 100%;
+  width: 50%;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media screen and (max-width:520px) {
+  .each-infomation {
+    height: 49%;
+    width: 100%;
+  }
+}
+
+.introduction-icon {
+  text-align: center;
+}
+
+@media screen and (max-width:520px) {
+  .introduction-icon {
+    order: 1;
+  }
+}
+
+.introduction-img {
+  height: 300px;
+  width: 100%;
+  border: 2px dashed lightgray;
+}
+
+@media screen and (max-width:520px) {
+  .introduction-img {
+    height: 250px;
+    order: 2;
+  }
+}
+
+.introduction-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.introduction-comment {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 24px;
+  font-family: HiraMinProN-W3;
+}
+
+@media screen and (max-width:520px) {
+  .introduction-comment {
+    order: 3;
+  }
+}
+
+@media screen and (max-width:520px) {
+  .introduction-comment h3 {
+    font-size: 24px;
+  }
+}
+
+.introduction-comment p {
+  font-size: 20px;
+  text-align: center;
+}
+
+@media screen and (max-width:520px) {
+  .introduction-comment p {
+    font-size: 16px;
+  }
+}
+
+/* メイン４ -----------------------------------------------------*/
+#information {
+  height: 1420px;
+  padding-top: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media screen and (max-width:520px) {
+  #information {
+    height: 1600px;
+  }
+}
+
+#information h2 {
+  height: 60px;
+  width: 100vw;
+  font-family: cursive;
+  font-size: 40px;
+  line-height: 60px;
+  text-align: center;
+}
+
+@media screen and (max-width:520px) {
+  #information h2 {
+    font-size: 28px;
+  }
+}
+
+#wedding-information {
+  height: 1360px;
+  width: 95%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (max-width:520px) {
+  #wedding-information {
+    flex-direction: column;
+    height: 1540px;
+  }
+}
+
+.wedding-information {
+  height: 100%;
+  width: 50%;
+  padding: 10px 60px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: left;
+}
+
+@media screen and (max-width:520px) {
+  .wedding-information {
+    height: 49%;
+    width: 100%;
+  }
+}
+
+.wedding-img {
+  height: 400px;
+  width: 100%;
+  border: 2px dashed lightgray;
+}
+
+@media screen and (max-width:520px) {
+  .wedding-img {
+    order: 2;
+    height: 200px;
+  }
+}
+
+.wedding-img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.country {
+  font-size: 28px;
+  text-align: center;
+  font-family: cursive;
+}
+
+@media screen and (max-width:520px) {
+  .country {
+    order: 1;
+    font-size: 22px;
+  }
+}
+
+#information p {
+  font-size: 24px;
+  font-family: HiraMinProN-W3;
+}
+
+@media screen and (max-width:520px) {
+  #information p {
+    order: 3;
+    font-size: 16px;
+  }
+}
+
+.map {
+  width: 100%;
+  text-align: center;
+}
+
+@media screen and (max-width:520px) {
+  .map {
+    order: 4;
+  }
+}
+
+.map iframe {
+  height: 300px;
+  width: 100%;
+}
+
+@media screen and (max-width:520px) {
+  .map iframe {
+    height: 150px;
+  }
+}
+
+/* メイン５
+回答フォーム説明 -----------------------------------------------------*/
+#explanation {
+  height: 180px;
+  padding-top: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#expalain {
+  height: 120px;
+  text-align: center;
+  font-family: HiraMinProN-W3;
+  font-size: 24px;
+}
+
+@media screen and (max-width:520px) {
+  #expalain {
+    font-size: 16px;
+  }
+}
+
+/* 回答フォーム -----------------------------------------------------*/
+#form {
+  height: 86px;
+  text-align: center;
+}
+
+#form-button {
+  font-size: 28px;
+  font-family: HiraMinProN-W3;
+}
+
+@media screen and (max-width:520px) {
+  #form-button {
+    font-size: 20px;
+  }
+}
+
+#form-button a {
+  display: inline-block;
+  padding: 20px 80px;
+}
+
+@media screen and (max-width:520px) {
+  #form-button a {
+    padding: 20px 50px;
+  }
+}
+
+#footer {
+  background-color: white;
+  height: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#footer p {
+  font-family: fantasy;
+  height: 50px;
+  width: 10%;
+  text-align: center;
+  line-height: 50px;
+}
+
+.far {
+  opacity: 0.5;
+}
